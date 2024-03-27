@@ -31,10 +31,24 @@ document.addEventListener('DOMContentLoaded', (event) => {
     skillItems.forEach((item) => {
         item.addEventListener('click', () => {
             const detail = item.querySelector('.skill-detail');
+            // Hide all other details
+            document.querySelectorAll('.skill-detail').forEach((otherDetail) => {
+                if (otherDetail !== detail) {
+                    otherDetail.style.display = 'none';
+                    otherDetail.style.opacity = '0';
+                    otherDetail.style.visibility = 'hidden';
+                }
+            });
+
+            // Toggle visibility of clicked detail
             if (detail.style.display === 'block') {
                 detail.style.display = 'none';
+                detail.style.opacity = '0';
+                detail.style.visibility = 'hidden';
             } else {
                 detail.style.display = 'block';
+                detail.style.opacity = '1';
+                detail.style.visibility = 'visible';
             }
         });
     });

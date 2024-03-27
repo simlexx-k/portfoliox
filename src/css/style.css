@@ -1,109 +1,120 @@
+:root {
+  --primary-background: #1d1a39;
+  --secondary-background: #451952;
+  --tertiary-elements: #662549;
+  --highlights: #ae445a;
+  --action-items: #f39f5a;
+  --text-elements: #e8bcb9;
+}
+
 .main-header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #007bff; /* Example background color */
-    padding: 50px 0; /* Example padding */
-    color: white; /* Text color */
+    background-color: var(--primary-background);
+    padding: 50px 0;
+    color: var(--text-elements);
 }
 
 h1 {
-    margin: 0; /* Removes default margin */
+    margin: 0;
 }
 
 .introduction {
-    background-color: #f8f9fa; /* Light grey background for contrast */
-    margin: 20px auto; /* Adds margin for aesthetic spacing */
-    padding: 20px; /* Adds padding inside the section */
-    max-width: 80%; /* Limits the width to enhance readability */
-    border-radius: 5px; /* Adds rounded corners */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adds a subtle shadow for depth */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Sets a readable font */
-    line-height: 1.6; /* Improves text readability */
+    background-color: var(--secondary-background);
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 80%;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-elements);
 }
 
 .skills {
-    background-color: #ffffff; /* White background for clarity */
-    margin: 20px auto; /* Adds margin for aesthetic spacing */
-    padding: 20px; /* Adds padding inside the section */
-    max-width: 80%; /* Limits the width to enhance readability */
-    border-radius: 5px; /* Adds rounded corners */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adds a subtle shadow for depth */
+    background-color: var(--secondary-background);
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 80%;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    color: var(--text-elements);
 }
 
 .skills h2 {
-    color: #007bff; /* Sets the color of the skills header */
-    margin-bottom: 15px; /* Adds space below the header */
+    color: var(--highlights);
+    margin-bottom: 15px;
 }
 
 .skills ul {
-    list-style-type: none; /* Removes default list styling */
-    padding: 0; /* Removes default padding */
+    list-style-type: none;
+    padding: 0;
 }
 
 .skills li {
-    background-color: #f0f0f0; /* Light grey background for items */
-    margin-bottom: 10px; /* Adds margin below each item */
-    padding: 10px; /* Adds padding inside each item */
-    border: 1px solid #cccccc; /* Adds border for clarity */
-    border-radius: 5px; /* Adds rounded corners to items */
+    background-color: var(--tertiary-elements);
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid var(--highlights);
+    border-radius: 5px;
 }
 
 .skill-item {
-    cursor: pointer; /* Indicates an interactive element */
-    position: relative; /* Establishes a positioning context for absolutely positioned skill-detail */
+    cursor: pointer;
+    position: relative;
 }
 
 .skill-detail {
-    display: none; /* Hidden by default */
-    position: absolute; /* Positioned absolutely relative to its nearest positioned ancestor (skill-item) */
-    bottom: -5px; /* Position it below the skill-item */
-    left: 0; /* Align to the left edge of skill-item */
-    background-color: #e9ecef; /* Light gray background for contrast */
-    color: #343a40; /* Dark text for readability */
-    padding: 10px; /* Padding for space around the text */
-    border-radius: 5px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Subtle shadow for depth */
-    width: 100%; /* Full width of the skill-item */
-    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
-    z-index: 10; /* Ensure it's above other content */
-    transition: opacity 0.3s ease-in-out; /* Smooth transition for the opacity change */
-    opacity: 0; /* Initial opacity set to 0 for the transition effect */
-    visibility: hidden; /* Initially not visible */
-    transform: translateY(10px); /* Slightly moves down the detail for the transition effect */
+    display: none;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--secondary-background);
+    color: var(--text-elements);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 10;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
 }
 
 .skill-item:hover .skill-detail,
 .skill-item:focus .skill-detail,
 .skill-item:active .skill-detail {
-    display: block; /* Shows the detail on hover, focus, or active states */
-    opacity: 1; /* Makes the detail fully opaque for visibility */
-    visibility: visible; /* Now visible */
-    transform: translateY(0); /* Moves the detail back to its original position */
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
 
 @media (prefers-reduced-motion: reduce) {
     .skill-detail {
-        transition: none; /* Respect users' preference for reduced motion */
+        transition: none;
     }
 }
 
 .contact-info {
-    background-color: #343a40; /* Dark gray background */
-    color: #ffffff; /* White text color */
-    padding: 40px 0; /* Vertical padding */
-    width: 100%; /* Full width */
+    background-color: var(--primary-background);
+    color: var(--text-elements);
+    padding: 40px 0;
+    width: 100%;
 }
 
 .contact-link {
-    color: #ffffff; /* White text color for links */
-    margin: 0 15px; /* Horizontal spacing between links */
-    text-decoration: none; /* No underline */
-    transition: color 0.3s; /* Smooth transition for hover effect */
+    color: var(--text-elements);
+    margin: 0 15px;
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
 .contact-link:hover {
-    color: #007bff; /* Change color on hover */
+    color: var(--action-items);
 }
 
 /* Small devices (landscape phones, 576px and up) */

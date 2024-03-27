@@ -1,18 +1,18 @@
 # PortfolioX
 
-PortfolioX is a personal portfolio website designed to showcase Simon Kosgei's professional skills, background, and contact information. The goal is to provide a clean, user-friendly interface that effectively communicates Simon's capabilities, making it easy for potential employers or clients to connect with him.
+PortfolioX is a personal portfolio website designed to showcase Simon Kosgei's professional skills, background, and contact information. The application aims to provide a clean, user-friendly interface that effectively communicates Simon's capabilities and offers easy ways to connect with him.
 
 ## Overview
 
-The website utilizes HTML, CSS, and vanilla JavaScript for structure, styling, and dynamic elements, respectively. Bootstrap is used to ensure the site is responsive and maintains a great look across various devices. The project is structured as a single-page application with distinct sections for the header, introduction, skills, and contact information.
+The website is developed using HTML, CSS, and vanilla JavaScript, with Bootstrap for responsive design. It's structured as a single-page application featuring distinct sections for the header, introduction, skills display, and contact information. The introduction of dynamic skill descriptions on hover and click enhances user interaction.
 
 ## Features
 
-- **Header Styling:** Displays Simon Kosgei's name prominently.
-- **Introduction Section:** Briefly introduces Simon and his professional background.
-- **Skills Display:** Lists Simon's professional skills with dynamic information appearing on hover.
-- **Contact Information:** Provides Simon's email and links to his social media profiles.
-- **Responsive Design:** Ensures a seamless viewing experience on different devices.
+- **Header Styling**: Displays Simon Kosgei's name prominently.
+- **Introduction Section**: Briefly introduces Simon and his professional background.
+- **Skills Display**: Lists Simon's professional skills. Detailed information about each skill appears on hover and click.
+- **Contact Information**: Provides Simon's email and links to his social media profiles.
+- **Responsive Design**: Ensures a seamless viewing experience across various devices.
 
 ## Getting Started
 
