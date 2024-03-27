@@ -55,8 +55,7 @@ h1 {
 }
 
 .skill-detail {
-    visibility: hidden; /* Hidden by default */
-    opacity: 0; /* Make it transparent */
+    display: none; /* Hidden by default */
     position: absolute; /* Positioned absolutely relative to its nearest positioned ancestor (skill-item) */
     bottom: -5px; /* Position it below the skill-item */
     left: 0; /* Align to the left edge of skill-item */
@@ -68,14 +67,6 @@ h1 {
     width: 100%; /* Full width of the skill-item */
     box-sizing: border-box; /* Includes padding and border in the element's total width and height */
     z-index: 10; /* Ensure it's above other content */
-    transition: opacity 0.3s ease, visibility 0s linear 0.3s; /* Smooth transition for appearing */
-}
-
-.skill-item:hover .skill-detail {
-    visibility: visible; /* Visible on hover */
-    opacity: 1; /* Make it opaque */
-    transform: translateY(100%); /* Move down to appear beneath the skill-item */
-    transition-delay: 0s; /* Remove delay when hovering */
 }
 
 @media (prefers-reduced-motion: reduce) {

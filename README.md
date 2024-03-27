@@ -1,6 +1,6 @@
 # PortfolioX
 
-PortfolioX is a personal portfolio website designed to showcase Simon Kosgei’s professional skills, background, and contact information. The goal is to provide a clean, user-friendly interface that effectively communicates Simon's capabilities, making it easy for potential employers or clients to connect with him.
+PortfolioX is a personal portfolio website designed to showcase Simon Kosgei's professional skills, background, and contact information. The goal is to provide a clean, user-friendly interface that effectively communicates Simon's capabilities, making it easy for potential employers or clients to connect with him.
 
 ## Overview
 
@@ -8,10 +8,10 @@ The website utilizes HTML, CSS, and vanilla JavaScript for structure, styling, a
 
 ## Features
 
-- **Header Styling:** Displays Simon Kosgei’s name prominently.
+- **Header Styling:** Displays Simon Kosgei's name prominently.
 - **Introduction Section:** Briefly introduces Simon and his professional background.
-- **Skills Display:** Lists Simon's professional skills.
-- **Contact Information:** Provides Simon’s email and links to his social media profiles.
+- **Skills Display:** Lists Simon's professional skills with dynamic information appearing on hover.
+- **Contact Information:** Provides Simon's email and links to his social media profiles.
 - **Responsive Design:** Ensures a seamless viewing experience on different devices.
 
 ## Getting Started

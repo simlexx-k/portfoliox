@@ -24,4 +24,18 @@ document.addEventListener('DOMContentLoaded', (event) => {
             }
         });
     });
+
+    // Functionality to toggle skill details on click
+    const skillItems = document.querySelectorAll('.skill-item');
+    
+    skillItems.forEach((item) => {
+        item.addEventListener('click', () => {
+            const detail = item.querySelector('.skill-detail');
+            if (detail.style.display === 'block') {
+                detail.style.display = 'none';
+            } else {
+                detail.style.display = 'block';
+            }
+        });
+    });
 });
