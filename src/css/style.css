@@ -1,0 +1,154 @@
+.main-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #007bff; /* Example background color */
+    padding: 50px 0; /* Example padding */
+    color: white; /* Text color */
+}
+
+h1 {
+    margin: 0; /* Removes default margin */
+}
+
+.introduction {
+    background-color: #f8f9fa; /* Light grey background for contrast */
+    margin: 20px auto; /* Adds margin for aesthetic spacing */
+    padding: 20px; /* Adds padding inside the section */
+    max-width: 80%; /* Limits the width to enhance readability */
+    border-radius: 5px; /* Adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adds a subtle shadow for depth */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Sets a readable font */
+    line-height: 1.6; /* Improves text readability */
+}
+
+.skills {
+    background-color: #ffffff; /* White background for clarity */
+    margin: 20px auto; /* Adds margin for aesthetic spacing */
+    padding: 20px; /* Adds padding inside the section */
+    max-width: 80%; /* Limits the width to enhance readability */
+    border-radius: 5px; /* Adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adds a subtle shadow for depth */
+}
+
+.skills h2 {
+    color: #007bff; /* Sets the color of the skills header */
+    margin-bottom: 15px; /* Adds space below the header */
+}
+
+.skills ul {
+    list-style-type: none; /* Removes default list styling */
+    padding: 0; /* Removes default padding */
+}
+
+.skills li {
+    background-color: #f0f0f0; /* Light grey background for items */
+    margin-bottom: 10px; /* Adds margin below each item */
+    padding: 10px; /* Adds padding inside each item */
+    border: 1px solid #cccccc; /* Adds border for clarity */
+    border-radius: 5px; /* Adds rounded corners to items */
+}
+
+.skill-item {
+    cursor: pointer; /* Indicates an interactive element */
+    position: relative; /* Establishes a positioning context for absolutely positioned skill-detail */
+}
+
+.skill-detail {
+    visibility: hidden; /* Hidden by default */
+    opacity: 0; /* Make it transparent */
+    position: absolute; /* Positioned absolutely relative to its nearest positioned ancestor (skill-item) */
+    bottom: -5px; /* Position it below the skill-item */
+    left: 0; /* Align to the left edge of skill-item */
+    background-color: #e9ecef; /* Light gray background for contrast */
+    color: #343a40; /* Dark text for readability */
+    padding: 10px; /* Padding for space around the text */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Subtle shadow for depth */
+    width: 100%; /* Full width of the skill-item */
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+    z-index: 10; /* Ensure it's above other content */
+    transition: opacity 0.3s ease, visibility 0s linear 0.3s; /* Smooth transition for appearing */
+}
+
+.skill-item:hover .skill-detail {
+    visibility: visible; /* Visible on hover */
+    opacity: 1; /* Make it opaque */
+    transform: translateY(100%); /* Move down to appear beneath the skill-item */
+    transition-delay: 0s; /* Remove delay when hovering */
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .skill-detail {
+        transition: none; /* Respect users' preference for reduced motion */
+    }
+}
+
+.contact-info {
+    background-color: #343a40; /* Dark gray background */
+    color: #ffffff; /* White text color */
+    padding: 40px 0; /* Vertical padding */
+    width: 100%; /* Full width */
+}
+
+.contact-link {
+    color: #ffffff; /* White text color for links */
+    margin: 0 15px; /* Horizontal spacing between links */
+    text-decoration: none; /* No underline */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.contact-link:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    .main-header {
+        padding: 30px 0;
+    }
+
+    .introduction, .skills {
+        max-width: 90%;
+        padding: 15px;
+        margin: 15px auto;
+    }
+
+    .contact-info {
+        padding: 30px 0;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .main-header {
+        padding: 40px 0;
+    }
+
+    .introduction, .skills {
+        max-width: 85%;
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    .contact-info {
+        padding: 35px 0;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .main-header {
+        padding: 50px 0;
+    }
+
+    .introduction, .skills {
+        max-width: 80%;
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    .contact-info {
+        padding: 40px 0;
+    }
+}
