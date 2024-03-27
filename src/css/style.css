@@ -67,6 +67,19 @@ h1 {
     width: 100%; /* Full width of the skill-item */
     box-sizing: border-box; /* Includes padding and border in the element's total width and height */
     z-index: 10; /* Ensure it's above other content */
+    transition: opacity 0.3s ease-in-out; /* Smooth transition for the opacity change */
+    opacity: 0; /* Initial opacity set to 0 for the transition effect */
+    visibility: hidden; /* Initially not visible */
+    transform: translateY(10px); /* Slightly moves down the detail for the transition effect */
+}
+
+.skill-item:hover .skill-detail,
+.skill-item:focus .skill-detail,
+.skill-item:active .skill-detail {
+    display: block; /* Shows the detail on hover, focus, or active states */
+    opacity: 1; /* Makes the detail fully opaque for visibility */
+    visibility: visible; /* Now visible */
+    transform: translateY(0); /* Moves the detail back to its original position */
 }
 
 @media (prefers-reduced-motion: reduce) {
