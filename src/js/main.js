@@ -52,4 +52,44 @@ document.addEventListener('DOMContentLoaded', (event) => {
             }
         });
     });
+
+    // Dynamically change theme colors based on specific conditions
+    changeThemeColors();
 });
+
+// Function to update theme colors dynamically
+function changeThemeColors() {
+    // Get the current hour of the day
+    const hour = new Date().getHours();
+
+    // Define color themes for day and night
+    const dayTheme = {
+        '--primary-background': '#1d1a39',
+        '--secondary-background': '#451952',
+        '--tertiary-elements': '#662549',
+        '--highlights': '#ae445a',
+        '--action-items': '#f39f5a',
+        '--text-elements': '#e8bcb9',
+    };
+
+    const nightTheme = {
+        '--primary-background': '#131122',
+        '--secondary-background': '#351842',
+        '--tertiary-elements': '#562341',
+        '--highlights': '#8e3c59',
+        '--action-items': '#bf6e4e',
+        '--text-elements': '#d8aeb7',
+    };
+
+    // Determine whether to use day or night theme based on the current hour
+    const theme = hour >= 6 && hour < 18 ? dayTheme : nightTheme;
+
+    // Update CSS variables in the document's root
+    for (const [key, value] of Object.entries(theme)) {
+        try {
+            document.documentElement.style.setProperty(key, value);
+        } catch (error) {
+            console.error('Error occurred while updating theme colors:', error.message, error.stack);
+        }
+    }
+}

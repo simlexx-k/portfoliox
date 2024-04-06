@@ -117,6 +117,90 @@ h1 {
     color: var(--action-items);
 }
 
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary-background: #131122;
+        --secondary-background: #351842;
+        --tertiary-elements: #562341;
+        --highlights: #8e3c59;
+        --action-items: #bf6e4e;
+        --text-elements: #d8aeb7;
+    }
+
+    body {
+        background-color: var(--primary-background);
+        color: var(--text-elements);
+    }
+
+    .main-header, .contact-info, .introduction, .skills {
+        background-color: var(--secondary-background);
+    }
+
+    .skills li {
+        background-color: var(--tertiary-elements);
+    }
+
+    h2, .contact-link:hover {
+        color: var(--highlights);
+    }
+
+    .contact-link {
+        color: var(--text-elements);
+    }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+
+    .main-header, .contact-info {
+        padding: 20px 0;
+    }
+
+    .introduction, .skills {
+        padding: 15px;
+        margin: 10px auto;
+        max-width: 95%;
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width: 601px) and (max-width: 960px) {
+    body {
+        font-size: 16px;
+    }
+
+    .main-header, .contact-info {
+        padding: 30px 0;
+    }
+
+    .introduction, .skills {
+        padding: 20px;
+        margin: 15px auto;
+        max-width: 90%;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 961px) {
+    body {
+        font-size: 18px;
+    }
+
+    .main-header, .contact-info {
+        padding: 40px 0;
+    }
+
+    .introduction, .skills {
+        padding: 25px;
+        margin: 20px auto;
+        max-width: 85%;
+    }
+}
+
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
     .main-header {
